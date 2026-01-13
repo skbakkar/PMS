@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Domain\Medicine\Contracts\CategoryRepositoryInterface;
+use App\Infrastructure\Medicine\Repositories\CategoryRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,7 +13,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->bind(
+            CategoryRepositoryInterface::class,
+            CategoryRepository::class
+        );
     }
 
     /**
