@@ -1,0 +1,61 @@
+app/
+├── Console/
+├── Domain/
+│   ├── Medicine/
+│   │   ├── Models/
+│   │   ├── Contracts/
+│   │   ├── Actions/
+│   │   ├── DataTransferObjects/
+│   │   ├── Events/
+│   │   └── Exceptions/
+│   ├── Inventory/
+│   │   ├── Models/
+│   │   ├── Contracts/
+│   │   ├── Actions/
+│   │   ├── DataTransferObjects/
+│   │   └── Events/
+│   ├── Sales/
+│   │   ├── Models/
+│   │   ├── Contracts/
+│   │   ├── Actions/
+│   │   ├── DataTransferObjects/
+│   │   └── Events/
+│   ├── Customer/
+│   │   ├── Models/
+│   │   ├── Contracts/
+│   │   └── DataTransferObjects/
+│   ├── Supplier/
+│   │   ├── Models/
+│   │   ├── Contracts/
+│   │   └── DataTransferObjects/
+│   └── Shared/
+│       ├── Enums/
+│       ├── ValueObjects/
+│       └── Traits/
+├── Infrastructure/
+│   ├── Medicine/
+│   │   └── Repositories/
+│   ├── Inventory/
+│   │   └── Repositories/
+│   ├── Sales/
+│   │   └── Repositories/
+│   ├── Customer/
+│   │   └── Repositories/
+│   ├── Supplier/
+│   │   └── Repositories/
+│   └── Persistence/
+│       └── Eloquent/
+├── Presentation/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   ├── Requests/
+│   │   ├── Resources/
+│   │   └── Middleware/
+│   ├── Livewire/
+│   │   ├── Medicine/
+│   │   ├── Inventory/
+│   │   ├── Sales/
+│   │   └── Dashboard/
+│   └── View/
+│       └── Components/
+└── Providers/
