@@ -1,8 +1,8 @@
 <?php
 
-namespace app\Infrastructure\Auth;
+namespace App\Infrastructure\Auth;
 
-use app\Domain\User\Models\User;
+use App\Domain\User\Models\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Laravel\Fortify\Contracts\CreatesNewUsers;

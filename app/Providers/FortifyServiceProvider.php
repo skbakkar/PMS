@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use app\Infrastructure\Auth\CreateNewUser;
-use app\Infrastructure\Auth\ResetUserPassword;
+use App\Infrastructure\Auth\CreateNewUser;
+use App\Infrastructure\Auth\ResetUserPassword;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;

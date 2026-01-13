@@ -1,6 +1,6 @@
 <?php
 
-use app\Domain\User\Models\User;
+use App\Domain\User\Models\User;
 use Laravel\Fortify\Features;
 
 test('two factor challenge redirects to login when not authenticated', function () {

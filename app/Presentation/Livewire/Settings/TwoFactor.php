@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Presentation\Livewire\Settings;
+namespace App\Presentation\Livewire\Settings;
 
 use Exception;
 use Laravel\Fortify\Actions\ConfirmTwoFactorAuthentication;
@@ -16,23 +16,23 @@ use Symfony\Component\HttpFoundation\Response;
 class TwoFactor extends Component
 {
     #[Locked]
-    public $twoFactorEnabled;
+    public bool $twoFactorEnabled;
 
     #[Locked]
-    public $requiresConfirmation;
+    public bool $requiresConfirmation;
 
     #[Locked]
-    public $qrCodeSvg = '';
+    public string $qrCodeSvg = '';
 
     #[Locked]
-    public $manualSetupKey = '';
+    public string $manualSetupKey = '';
 
-    public $showModal = false;
+    public bool $showModal = false;
 
-    public $showVerificationStep = false;
+    public bool $showVerificationStep = false;
 
-    #[Validate('required|string|size:6', false)]
-    public $code = '';
+    #[Validate('required|string|size:6', onUpdate: false)]
+    public string $code = '';
 
     /**
      * Mount the component.
@@ -75,7 +75,7 @@ class TwoFactor extends Component
         try {
             $this->qrCodeSvg = $user?->twoFactorQrCodeSvg();
             $this->manualSetupKey = decrypt($user->two_factor_secret);
-        } catch (Exception $ex) {
+        } catch (Exception) {
             $this->addError('setupData', 'Failed to fetch setup data.');
 
             $this->reset('qrCodeSvg', 'manualSetupKey');

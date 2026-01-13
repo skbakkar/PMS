@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Presentation\Livewire\Settings;
+namespace App\Presentation\Livewire\Settings;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rules\Password as PasswordRule;

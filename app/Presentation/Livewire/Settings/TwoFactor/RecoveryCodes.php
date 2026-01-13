@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Presentation\Livewire\Settings\TwoFactor;
+namespace App\Presentation\Livewire\Settings\TwoFactor;
 
 use Exception;
 use Laravel\Fortify\Actions\GenerateNewRecoveryCodes;

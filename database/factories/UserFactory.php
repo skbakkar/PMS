@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Domain\User\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\app\Domain\User\Models\User>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Domain\User\Models\User>
  */
 class UserFactory extends Factory
 {
@@ -21,6 +22,7 @@ class UserFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = User::class;
     public function definition(): array
     {
         return [

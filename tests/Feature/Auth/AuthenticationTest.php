@@ -1,6 +1,6 @@
 <?php
 
-use app\Domain\User\Models\User;
+use App\Domain\User\Models\User;
 use Laravel\Fortify\Features;
 
 test('login screen can be rendered', function () {
@@ -12,14 +12,14 @@ test('login screen can be rendered', function () {
 test('users can authenticate using the login screen', function () {
     $user = User::factory()->create();
 
-    $response = $this->post(route('login.store'), [
+    $response = $this->post(route('login'), [
         'email' => $user->email,
         'password' => 'password',
     ]);
 
     $response
         ->assertSessionHasNoErrors()
-        ->assertRedirect(route('dashboard', absolute: false));
+        ->assertRedirect(route('dashboard'));
 
     $this->assertAuthenticated();
 });

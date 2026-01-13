@@ -1,8 +1,8 @@
 <?php
 
-namespace app\Presentation\Livewire\Settings;
+namespace App\Presentation\Livewire\Settings;
 
-use app\Domain\User\Models\User;
+use App\Domain\User\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\Rule;
